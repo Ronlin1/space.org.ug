@@ -26,7 +26,7 @@ export function LoginForm({ nextPath }: LoginFormProps) {
           defaultValue={state.email}
           id="email"
           name="email"
-          placeholder="admin@space.org.ug"
+          placeholder="Admin email"
           type="email"
         />
       </div>

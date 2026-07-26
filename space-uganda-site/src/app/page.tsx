@@ -58,7 +58,7 @@ export default async function Home() {
           <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(21,23,28,0.96),rgba(21,23,28,0.72),rgba(21,23,28,0.24))]" />
           <div className="mx-auto flex min-h-[560px] max-w-7xl flex-col justify-center px-5 py-16 md:px-8">
             <p className="text-sm font-black uppercase tracking-normal text-ugandaGold">
-              {siteIdentity.domain}
+              {siteIdentity.tagline}
             </p>
             <h1 className="mt-4 max-w-4xl text-5xl font-black leading-tight text-white md:text-7xl">
               Space Uganda

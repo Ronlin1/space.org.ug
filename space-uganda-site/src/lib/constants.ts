@@ -1,7 +1,7 @@
 export const siteIdentity = {
   name: "Space Uganda",
   domain: "space.org.ug",
-  tagline: "Curate. Coordinate. Catalyse.",
+  tagline: "Uganda's launchpad for space people, ideas, and missions.",
   description:
     "Uganda's umbrella home for space enthusiasts, educators, engineers, innovators, astronomers, and partner organisations."
 } as const;

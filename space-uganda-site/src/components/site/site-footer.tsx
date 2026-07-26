@@ -38,7 +38,7 @@ export function SiteFooter() {
               World Space Week
               <ExternalLink aria-hidden="true" size={14} />
             </Link>
-            <Link href="mailto:hello@space.org.ug">hello@space.org.ug</Link>
+            <Link href="/join">Contact Space Uganda</Link>
             <Link href="/admin">Admin portal</Link>
           </div>
         </div>

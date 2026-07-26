@@ -22,7 +22,7 @@ export function SiteHeader() {
           <span>
             <span className="block text-base font-black text-ink">{siteIdentity.name}</span>
             <span className="block text-xs font-semibold uppercase tracking-normal text-ink/55">
-              {siteIdentity.domain}
+              Uganda&apos;s Space Launchpad
             </span>
           </span>
         </Link>
