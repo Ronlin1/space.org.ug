@@ -48,11 +48,11 @@ export default async function Home() {
       <main>
         <section className="relative isolate overflow-hidden bg-ink text-white">
           <Image
-            alt="World Space Week 2026 rocket visual"
+            alt="Satellite over East Africa with Uganda flag detail"
             className="absolute inset-0 -z-20 object-cover object-right opacity-65"
             fill
             priority
-            src="/assets/wsw-2026-save-the-date.png"
+            src="/assets/space-uganda-hero-banner.png"
             sizes="100vw"
           />
           <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(21,23,28,0.96),rgba(21,23,28,0.72),rgba(21,23,28,0.24))]" />
