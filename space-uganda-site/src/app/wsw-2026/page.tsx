@@ -93,7 +93,7 @@ export default async function Wsw2026Page() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 className="inline-flex items-center gap-2 rounded-md bg-ugandaGold px-5 py-3 font-black text-ink transition hover:bg-white"
-                href="/community"
+                href="/join"
               >
                 Join the ecosystem
                 <ArrowRight aria-hidden="true" size={18} />

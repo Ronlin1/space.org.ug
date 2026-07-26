@@ -7,7 +7,8 @@ const navItems = [
   { href: "/community", label: "Community" },
   { href: "/team", label: "Team" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/wsw-2026", label: "WSW 2026" }
+  { href: "/wsw-2026", label: "WSW 2026" },
+  { href: "/join", label: "Join" }
 ];
 
 export function SiteHeader() {

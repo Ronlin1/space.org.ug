@@ -28,6 +28,7 @@ export function SiteFooter() {
             <Link href="/team">Team</Link>
             <Link href="/gallery">Gallery</Link>
             <Link href="/wsw-2026">WSW Uganda 2026</Link>
+            <Link href="/join">Join Space Uganda</Link>
           </div>
         </div>
         <div>
