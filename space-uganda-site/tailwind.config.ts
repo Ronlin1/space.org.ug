@@ -14,7 +14,10 @@ const config: Config = {
         },
         orbit: "#7c3aed",
         ugandaGold: "#f7c948",
-        ugandaGreen: "#22c55e"
+        ugandaGreen: "#16a34a",
+        ugandaRed: "#d92d20",
+        paper: "#f6f7f9",
+        ink: "#15171c"
       },
       boxShadow: {
         soft: "0 20px 60px rgba(0, 0, 0, 0.28)"
