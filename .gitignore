@@ -1,0 +1,40 @@
+# Isolated implementation workspaces.
+.worktrees
+.worktrees/
+
+# Keep raw WSW source material local unless explicitly selected for app assets.
+2025 WSW Poster to Download -20251001T121142Z-1-001/
+2026/
+Space_Apps_Logo_Files/
+USW/
+WSW_AllLogos/
+WSW_Dates/
+*.zip
+*.mp4
+*.xlsx
+*.pdf
+*.docx
+*.png
+*.jpg
+*.jpeg
+*.DS_Store
+__MACOSX/
+
+# App build artifacts.
+space-uganda-site/node_modules/
+space-uganda-site/.next/
+space-uganda-site/.env
+space-uganda-site/.env*.local
+space-uganda-site/playwright-report/
+space-uganda-site/test-results/
+space-uganda-site/coverage/
+
+# Keep docs and app source tracked.
+!docs/
+!docs/**
+!space-uganda-site/
+!space-uganda-site/**
+!space-uganda-site/public/
+!space-uganda-site/public/**
+!space-uganda-site/public/assets/
+!space-uganda-site/public/assets/**
