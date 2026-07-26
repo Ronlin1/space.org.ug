@@ -48,15 +48,15 @@ export default async function Home() {
       <main>
         <section className="relative isolate overflow-hidden bg-ink text-white">
           <Image
-            alt="Uganda Space Week visual"
-            className="absolute inset-0 -z-20 object-cover opacity-55"
+            alt="World Space Week 2026 rocket visual"
+            className="absolute inset-0 -z-20 object-cover object-right opacity-65"
             fill
             priority
-            src="/assets/uganda-space-week-2025-main.png"
+            src="/assets/wsw-2026-save-the-date.png"
             sizes="100vw"
           />
-          <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(21,23,28,0.96),rgba(21,23,28,0.76),rgba(21,23,28,0.32))]" />
-          <div className="mx-auto flex min-h-[calc(100svh-150px)] max-w-7xl flex-col justify-end px-5 py-16 md:px-8">
+          <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(21,23,28,0.96),rgba(21,23,28,0.72),rgba(21,23,28,0.24))]" />
+          <div className="mx-auto flex min-h-[560px] max-w-7xl flex-col justify-center px-5 py-16 md:px-8">
             <p className="text-sm font-black uppercase tracking-normal text-ugandaGold">
               {siteIdentity.domain}
             </p>
@@ -223,6 +223,7 @@ export default async function Home() {
                         alt={item.title}
                         className="object-cover"
                         fill
+                        loading="eager"
                         src={item.mediaUrl}
                         sizes="(min-width: 768px) 40vw, 100vw"
                       />
