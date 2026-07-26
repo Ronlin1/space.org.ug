@@ -38,7 +38,7 @@ export default async function TeamPage() {
         <section className="bg-paper px-5 py-16 md:px-8">
           <div className="mx-auto max-w-7xl">
             <SectionHeading
-              description="Team profiles are editable from the admin side, so the public page can grow from national coordinators to volunteers, advisors, technical leads, and host teams."
+              description="Team profiles can grow from national coordinators to volunteers, advisors, technical leads, and host teams as the organisation expands."
               eyebrow={`${teamMembers.length} Public Profiles`}
               title="The people moving the mission"
             />

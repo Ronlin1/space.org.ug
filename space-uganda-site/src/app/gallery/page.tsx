@@ -39,7 +39,7 @@ export default async function GalleryPage() {
         <section className="bg-paper px-5 py-16 md:px-8">
           <div className="mx-auto max-w-7xl">
             <SectionHeading
-              description="The first visuals are placeholders from the current archive. Administrators can add polished galleries and captions as new material arrives."
+              description="The first visuals are placeholders from the current archive. The organising team can add polished galleries and captions as new material arrives."
               eyebrow="Media Archive"
               title="Prepared for the moments you will add"
             />
@@ -75,7 +75,7 @@ export default async function GalleryPage() {
                 <h2 className="mt-5 text-2xl font-black text-ink">Gallery slots are ready</h2>
                 <p className="mt-3 max-w-xl text-sm leading-6 text-ink/65">
                   Add new photos, videos, captions, event dates, and featured status
-                  through the admin side as the Space Uganda archive grows.
+                  as the Space Uganda archive grows.
                 </p>
               </article>
             </div>

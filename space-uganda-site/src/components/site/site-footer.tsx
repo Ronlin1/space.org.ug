@@ -39,7 +39,6 @@ export function SiteFooter() {
               <ExternalLink aria-hidden="true" size={14} />
             </Link>
             <Link href="/join">Contact Space Uganda</Link>
-            <Link href="/admin">Admin portal</Link>
           </div>
         </div>
       </div>

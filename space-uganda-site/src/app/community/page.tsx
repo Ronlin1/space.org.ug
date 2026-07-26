@@ -53,7 +53,7 @@ export default async function CommunityPage() {
         <section className="bg-paper px-5 py-16 md:px-8">
           <div className="mx-auto max-w-7xl">
             <SectionHeading
-              description="The listing begins with the organisations referenced in the current WSW Uganda planning material and can be expanded from the admin dashboard as more partners join."
+              description="The listing begins with the organisations referenced in the current WSW Uganda planning material and can be expanded as more partners join."
               eyebrow={`${communities.length} Listed Communities`}
               title="Discover who is building with us"
             />

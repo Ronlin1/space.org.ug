@@ -35,7 +35,7 @@ export function SubmissionForm() {
         </p>
         <h2 className="mt-3 text-2xl font-black text-ink">Thank you for building with us.</h2>
         <p className="mt-3 text-sm leading-6 text-ink/65">
-          Your message is now in the Space Uganda admin dashboard for review.
+          Your message is now with the Space Uganda organising team for review.
         </p>
       </div>
     );

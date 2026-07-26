@@ -36,12 +36,6 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <Link
-            className="rounded-md bg-ink px-3 py-2 text-sm font-bold text-white transition hover:bg-ugandaRed"
-            href="/admin"
-          >
-            Admin
-          </Link>
         </nav>
       </div>
     </header>

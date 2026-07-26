@@ -73,7 +73,7 @@ export default function JoinPage() {
         <section className="bg-paper px-5 py-16 md:px-8">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
             <SectionHeading
-              description="Every submission is stored in the real database and reviewed from the admin dashboard. This keeps the public ecosystem open while giving coordinators a structured workflow."
+              description="Every submission is stored securely and reviewed by the organising team. This keeps the public ecosystem open while giving coordinators a structured workflow."
               eyebrow="Public Intake"
               title="Tell us where you fit"
             />

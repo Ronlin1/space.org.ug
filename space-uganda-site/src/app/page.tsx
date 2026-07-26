@@ -131,7 +131,7 @@ export default async function Home() {
           <div className="mx-auto max-w-7xl">
             <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
               <SectionHeading
-                description="The directory starts with confirmed and mapped communities from the Uganda Space Week planning material. Admins can keep it current as the network grows."
+                description="The directory starts with confirmed and mapped communities from the Uganda Space Week planning material. The organising team can keep it current as the network grows."
                 eyebrow="Community"
                 title="Organisations under the umbrella"
               />
@@ -248,7 +248,7 @@ export default async function Home() {
         <section className="bg-white px-5 py-16 md:px-8">
           <div className="mx-auto max-w-7xl">
             <SectionHeading
-              description="Latest public updates from the ecosystem. These will become fully managed announcements through the admin portal."
+              description="Latest public updates from the ecosystem. These will be curated by the organising team as the network grows."
               eyebrow="Updates"
               title="Signals from the network"
             />
