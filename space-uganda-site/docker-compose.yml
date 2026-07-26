@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: space_uganda
+      POSTGRES_USER: space_uganda
+      POSTGRES_PASSWORD: space_uganda_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - space_uganda_postgres:/var/lib/postgresql/data
+
+volumes:
+  space_uganda_postgres:
