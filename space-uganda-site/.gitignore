@@ -7,3 +7,4 @@ test-results/
 .env*.local
 prisma/dev.db
 *.log
+tsconfig.tsbuildinfo

@@ -1,0 +1,206 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  EDITOR
+}
+
+enum PublicationStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum SubmissionStatus {
+  NEW
+  UNDER_REVIEW
+  ACCEPTED
+  NEEDS_CHANGES
+  DECLINED
+  ARCHIVED
+}
+
+enum SubmissionType {
+  JOIN
+  PARTNER
+  INNOVATION
+  CONTACT
+}
+
+enum EventFormat {
+  VIRTUAL
+  PHYSICAL
+  HYBRID
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  role         Role     @default(EDITOR)
+  active       Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model TeamMember {
+  id           String   @id @default(cuid())
+  name         String
+  role         String
+  organisation String
+  bio          String
+  photoUrl     String?
+  email        String?
+  links        Json?
+  sortOrder    Int      @default(0)
+  featured     Boolean  @default(false)
+  published    Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Community {
+  id           String   @id @default(cuid())
+  name         String   @unique
+  slug         String   @unique
+  category     String
+  summary      String
+  description  String
+  logoUrl      String?
+  websiteUrl   String?
+  socialLinks  Json?
+  contactEmail String?
+  location     String?
+  featured     Boolean  @default(false)
+  published    Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Partner {
+  id           String   @id @default(cuid())
+  name         String
+  slug         String   @unique
+  type         String
+  logoUrl      String?
+  websiteUrl   String?
+  description  String
+  contribution String?
+  featured     Boolean  @default(false)
+  published    Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Campaign {
+  id             String            @id @default(cuid())
+  name           String
+  slug           String            @unique
+  theme          String
+  startsAt       DateTime
+  endsAt         DateTime
+  description    String
+  heroImageUrl   String?
+  status         PublicationStatus @default(DRAFT)
+  createdAt      DateTime          @default(now())
+  updatedAt      DateTime          @updatedAt
+  programmeItems WswProgrammeItem[]
+  events         Event[]
+}
+
+model WswProgrammeItem {
+  id               String      @id @default(cuid())
+  campaignId       String
+  campaign         Campaign    @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  title            String
+  startsAt         DateTime?
+  endsAt           DateTime?
+  location         String?
+  format           EventFormat @default(PHYSICAL)
+  track            String
+  leadOrganisation String
+  description      String
+  sortOrder        Int         @default(0)
+  published        Boolean     @default(true)
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+}
+
+model Event {
+  id              String            @id @default(cuid())
+  campaignId      String?
+  campaign        Campaign?         @relation(fields: [campaignId], references: [id], onDelete: SetNull)
+  title           String
+  slug            String            @unique
+  startsAt        DateTime
+  endsAt          DateTime?
+  location        String
+  format          EventFormat
+  description     String
+  registrationUrl String?
+  status          PublicationStatus @default(DRAFT)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+}
+
+model GalleryItem {
+  id        String   @id @default(cuid())
+  title     String
+  mediaType String
+  mediaUrl  String
+  caption   String?
+  eventId   String?
+  eventDate DateTime?
+  featured  Boolean  @default(false)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Announcement {
+  id          String            @id @default(cuid())
+  title       String
+  slug        String            @unique
+  excerpt     String
+  content     String
+  category    String
+  status      PublicationStatus @default(DRAFT)
+  publishedAt DateTime?
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+}
+
+model Submission {
+  id             String           @id @default(cuid())
+  type           SubmissionType
+  status         SubmissionStatus @default(NEW)
+  submitterName  String
+  submitterEmail String
+  phone          String?
+  organisation   String?
+  title          String
+  category       String?
+  abstract       String
+  supportNeeds   String?
+  safetyNotes    String?
+  linkUrl        String?
+  reviewerNotes  String?
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+}
+
+model SiteSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
